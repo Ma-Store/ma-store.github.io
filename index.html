@@ -1,90 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="google-adsense-account" content="ca-pub-5083579628719393">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>MA Store - Modern Marketplace</title>
 
-<meta name="description" content="MA Store is a modern local marketplace to buy and sell products easily in your city.">
+<meta name="description" content="MA Store is a modern local marketplace where users can buy and sell products easily in their city.">
 
 <style>
 
-body{
+*{
   margin:0;
-  font-family:Arial, sans-serif;
-  background:#f4f4f4;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:Arial,sans-serif;
+  background:linear-gradient(to bottom,#f5f5f5,#ececec);
   color:#111;
 }
 
 /* TOP BAR */
+
 .topbar{
   background:#000;
   color:#fff;
   padding:18px;
   text-align:center;
-  font-size:26px;
+  font-size:30px;
   font-weight:bold;
   position:sticky;
   top:0;
+  z-index:999;
+  box-shadow:0 3px 15px rgba(0,0,0,0.2);
 }
 
 /* HERO */
+
 .hero{
-  background:linear-gradient(135deg,#000,#2a2a2a);
-  color:white;
-  padding:40px 20px;
+  background:linear-gradient(135deg,#4da,#4da6ff);
+  color:black;
+  padding:45px 20px;
   text-align:center;
 }
 
 .hero h1{
-  font-size:30px;
-  margin-bottom:10px;
+  font-size:34px;
+  margin-bottom:12px;
+  font-weight:bold;
+  color:black;
 }
 
 .hero p{
-  font-size:16px;
-  opacity:0.9;
+  font-size:17px;
   max-width:700px;
   margin:auto;
+  color:#111;
+  line-height:1.6;
 }
 
-/* MAIN CONTAINER */
+/* CONTAINER */
+
 .container{
-  max-width:1000px;
+  max-width:1100px;
   margin:auto;
   padding:20px;
 }
 
 /* CITY BOX */
+
 .city-box{
   background:white;
-  padding:15px;
-  border-radius:14px;
+  padding:18px;
+  border-radius:16px;
   text-align:center;
   margin-top:-20px;
-  box-shadow:0 5px 20px rgba(0,0,0,0.08);
+  box-shadow:0 6px 20px rgba(0,0,0,0.08);
+  font-size:20px;
   font-weight:bold;
 }
 
+/* SCROLL TEXT */
+
+.scroll-hint{
+  text-align:center;
+  margin-top:18px;
+  font-size:14px;
+  opacity:0.7;
+}
+
+/* BUTTON */
+
+.btn{
+  width:100%;
+  padding:17px;
+  background:linear-gradient(90deg,#000,#222);
+  color:white;
+  border:none;
+  border-radius:14px;
+  margin-top:20px;
+  font-size:18px;
+  cursor:pointer;
+  font-weight:bold;
+  box-shadow:0 6px 20px rgba(0,0,0,0.18);
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:scale(1.02);
+}
+
 /* GRID */
+
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:15px;
-  margin-top:20px;
+  gap:18px;
+  margin-top:30px;
 }
 
 /* CARD */
+
 .card{
   background:white;
-  padding:25px;
-  border-radius:18px;
+  padding:28px;
+  border-radius:20px;
   text-align:center;
   box-shadow:0 8px 25px rgba(0,0,0,0.08);
   transition:0.3s;
-  cursor:pointer;
 }
 
 .card:hover{
@@ -92,60 +137,110 @@ body{
 }
 
 .icon{
-  font-size:40px;
-  margin-bottom:10px;
+  font-size:50px;
+  margin-bottom:12px;
 }
 
-/* PRODUCT SECTION */
-.section-title{
-  margin-top:30px;
+.card h3{
+  margin-bottom:10px;
   font-size:22px;
+}
+
+.card p{
+  color:#555;
+  font-size:15px;
+}
+
+/* SECTION TITLE */
+
+.section-title{
+  margin-top:40px;
+  margin-bottom:18px;
+  font-size:26px;
   font-weight:bold;
 }
 
-/* PRODUCT BOX */
+/* PRODUCT */
+
 .product{
   background:white;
-  padding:15px;
-  border-radius:14px;
-  box-shadow:0 5px 20px rgba(0,0,0,0.06);
-  text-align:left;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 6px 20px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+
+.product:hover{
+  transform:translateY(-5px);
 }
 
 .product img{
   width:100%;
-  border-radius:12px;
-  height:140px;
+  height:180px;
   object-fit:cover;
 }
 
-/* BUTTON */
-.btn{
-  width:100%;
-  padding:16px;
-  background:#000;
-  color:white;
-  border:none;
-  border-radius:12px;
-  margin-top:25px;
-  font-size:18px;
-  cursor:pointer;
+.product-content{
+  padding:15px;
 }
 
-/* SCROLL HINT */
-.scroll-hint{
-  text-align:center;
-  margin-top:10px;
-  font-size:14px;
-  opacity:0.6;
+.product-content h3{
+  margin-bottom:8px;
 }
+
+.product-content p{
+  color:#555;
+  font-size:14px;
+}
+
+/* INFO SECTION */
+
+.info-box{
+  background:white;
+  padding:25px;
+  border-radius:18px;
+  margin-top:35px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.07);
+}
+
+.info-box h2{
+  margin-bottom:15px;
+  font-size:26px;
+}
+
+.info-box p{
+  margin-bottom:15px;
+  line-height:1.8;
+  color:#444;
+}
+
+/* FOOTER */
 
 .footer{
-  text-align:center;
-  padding:25px;
   background:#000;
   color:white;
+  text-align:center;
+  padding:25px;
   margin-top:40px;
+  font-size:15px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+  font-size:28px;
+}
+
+.city-box{
+  font-size:18px;
+}
+
+.section-title{
+  font-size:23px;
+}
+
 }
 
 </style>
@@ -153,72 +248,148 @@ body{
 
 <body>
 
-<div class="topbar">MA Store</div>
+<!-- TOP BAR -->
 
-<div class="hero">
-  <h1>Buy & Sell in Your City</h1>
-  <p>A modern marketplace where you can discover local deals, sell products easily, and connect with buyers in your area.</p>
+<div class="topbar">
+MA Store
 </div>
 
+<!-- HERO -->
+
+<div class="hero">
+
+<h1>Buy & Sell Products Easily</h1>
+
+<p>
+MA Store is a modern online marketplace where users can buy and sell products locally, explore categories, and discover amazing deals in their city.
+</p>
+
+</div>
+
+<!-- CONTAINER -->
+
 <div class="container">
+
+<!-- CITY -->
 
 <div class="city-box">
 Selected City: Mian Channu
 </div>
 
-<div class="scroll-hint">▼ Scroll to explore marketplace ▼</div>
+<!-- SCROLL -->
 
-<!-- MAIN MENU -->
+<div class="scroll-hint">
+▼ Scroll to explore marketplace ▼
+</div>
+
+<!-- BUTTON -->
+
+<button class="btn" onclick="goNext()">
+Continue to App
+</button>
+
+<!-- MENU -->
+
 <div class="grid">
 
-<div class="card" onclick="goBuy()">
+<div class="card">
 <div class="icon">🛒</div>
 <h3>Buy Products</h3>
-<p>Find local products from sellers</p>
+<p>
+Browse local marketplace listings and discover products nearby.
+</p>
 </div>
 
-<div class="card" onclick="goSell()">
+<div class="card">
 <div class="icon">📦</div>
 <h3>Sell Products</h3>
-<p>Post your product and earn money</p>
+<p>
+Post your products online and connect with buyers easily.
+</p>
 </div>
 
-<div class="card" onclick="goSettings()">
+<div class="card">
 <div class="icon">⚙️</div>
-<h3>Settings</h3>
-<p>Manage your account</p>
+<h3>Manage Account</h3>
+<p>
+Control settings, city preferences, and marketplace options.
+</p>
 </div>
 
 </div>
 
-<!-- FEATURED PRODUCTS -->
-<h2 class="section-title">🔥 Featured Listings</h2>
+<!-- PRODUCTS -->
+
+<h2 class="section-title">
+🔥 Featured Products
+</h2>
 
 <div class="grid">
 
 <div class="product">
-<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800">
-<h3>iPhone Product</h3>
-<p>High quality used phone available</p>
+
+<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=900">
+
+<div class="product-content">
+<h3>iPhone Collection</h3>
+<p>
+High quality smartphones available at affordable prices.
+</p>
+</div>
+
 </div>
 
 <div class="product">
-<img src="https://images.unsplash.com/photo-1580894908361-967195033215?w=800">
-<h3>Furniture Set</h3>
-<p>Modern home furniture at best price</p>
+
+<img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=900">
+
+<div class="product-content">
+<h3>Modern Headphones</h3>
+<p>
+Explore electronic accessories and audio products.
+</p>
+</div>
+
 </div>
 
 <div class="product">
-<img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800">
-<h3>Fashion Items</h3>
-<p>Branded clothes and accessories</p>
+
+<img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=900">
+
+<div class="product-content">
+<h3>Fashion Accessories</h3>
+<p>
+Find trending fashion items and lifestyle products.
+</p>
 </div>
 
 </div>
 
-<button class="btn" onclick="goNext()">Continue to App</button>
+</div>
+
+<!-- INFO -->
+
+<div class="info-box">
+
+<h2>Why Choose MA Store?</h2>
+
+<p>
+MA Store provides a simple and professional online marketplace experience where users can buy and sell products safely in their local city.
+</p>
+
+<p>
+Our platform supports multiple categories including electronics, fashion, furniture, vehicles, mobile phones, and many other useful products.
+</p>
+
+<p>
+We focus on user-friendly browsing, mobile responsiveness, and smooth marketplace performance for all users.
+</p>
 
 </div>
+
+</div>
+
+<!-- FOOTER -->
 
 <div class="footer">
 © 2026 MA Store Marketplace
@@ -226,19 +397,8 @@ Selected City: Mian Channu
 
 <script>
 
-function goBuy(){
-  alert("Buy Section Open");
-}
-
-function goSell(){
-  alert("Sell Section Open");
-}
-
-function goSettings(){
-  alert("Settings Open");
-}
-
 function goNext(){
+
   const user = localStorage.getItem("userName");
 
   if(user && user.trim() !== ""){
@@ -246,6 +406,7 @@ function goNext(){
   }else{
     window.location.href = "signup.html";
   }
+
 }
 
 </script>
